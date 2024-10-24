@@ -54,6 +54,38 @@
     color: #ffcc00;
 }
 
+/* For small screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background for mobile */
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Hamburger menu (for mobile) */
+    .navbar .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+    }
+}
+
 /* Homepage Section */
 .homepage {
     position: relative;
@@ -109,6 +141,23 @@
     color: white;
 }
 
+/* Responsive Text in the Homepage */
+@media (max-width: 768px) {
+    .homepage h2 {
+        font-size: 30px; /* Smaller font for mobile */
+    }
+
+    .homepage p {
+        font-size: 18px; /* Smaller font for mobile */
+    }
+
+    .search-btn {
+        padding: 15px 60px; /* Smaller padding for mobile */
+        font-size: 20px;
+    }
+}
+
+
 /* How It Works Section */
 .how-it-works {
     padding: 60px 20px;
@@ -151,6 +200,19 @@
     font-size: 100px;
     margin-bottom: 20px;
 }
+/* Responsive How It Works Section */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;
+    }
+
+    .step {
+        width: 90%; /* Full width on mobile */
+        margin-bottom: 20px; /* Add margin between steps */
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
