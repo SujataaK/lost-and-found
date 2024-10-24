@@ -1,0 +1,174 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgba(122, 121, 121, 0.8); /* Dark background when scrolling */
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    color: #ffcc00;
+}
+
+/* Homepage Section */
+.homepage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('images/home-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken background image */
+    z-index: 1;
+}
+
+.homepage h2{
+    position: relative;
+    z-index: 2;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+.homepage p {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+}
+
+.search-btn{
+    background-color: #ffcc00;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px 100px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+.search-btn:hover{
+    background-color: green;
+    color: white;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.how-it-works h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    height: 500px;
+    min-width: 280px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.step p {
+    font-size: 25px;
+}
+
+.icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar.scrolled .nav-links {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .step {
+        width: 100%;
+    }
+}
